@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /templates/
 Disallow: /config.php
-Host: https://your-actual-domain.com
+Host: http://play-1win.gamer.gd
 
-Sitemap: https://your-actual-domain.com/sitemap.xml
+Sitemap: http://play-1win.gamer.gd/sitemap.xml

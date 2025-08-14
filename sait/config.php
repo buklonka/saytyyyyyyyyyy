@@ -8,7 +8,7 @@ $site_config = [
     'casino_name'    => "1win", // Название обозреваемого казино
     'affiliate_link' => "https://1wilib.life/casino/list/4?p=5lv5", // Главная партнерская ссылка
     'promo_code'     => "BIBAN", // Промокод для регистрации
-    'domain_name'    => "http://localhost/sait" // Адрес сайта. Для реального сайта - https://your-domain.com
+    'domain_name'    => "http://play-1win.gamer.gd" // АКТУАЛЬНЫЙ ДОМЕН САЙТА
 ];
 
 
