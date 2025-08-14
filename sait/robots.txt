@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /templates/
+Disallow: /config.php
+Host: https://your-actual-domain.com
+
+Sitemap: https://your-actual-domain.com/sitemap.xml

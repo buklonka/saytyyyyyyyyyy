@@ -1,0 +1,211 @@
+/* === ДИЗАЙН-СИСТЕМА v3.0 "НОЧНОЙ ЛАС-ВЕГАС" === */
+
+/* --- 1. Шрифты и Переменные --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+:root {
+    --font-header: 'Playfair Display', serif; /* Элегантный шрифт для заголовков */
+    --font-base: 'Lato', sans-serif;          /* Чистый шрифт для текста */
+
+    --color-bg: #1a1a1a;                      /* Глубокий темный фон */
+    --color-surface: #2c2c2c;                /* Фон для карточек, чуть светлее */
+    --color-border: #444;                     /* Цвет рамок */
+    --color-text: #e5e5e5;                    /* Основной текст, не чисто белый */
+    --color-text-muted: #999;                 /* Приглушенный текст */
+
+    --color-gold: #c0a062;                     /* Приглушенное матовое золото */
+    --color-bordo: #8a2a3e;                    /* Глубокий винный/бордовый */
+    --color-neon-blue: #00bfff;                /* Яркий неоновый синий для CTA */
+}
+
+/* --- 2. Базовые Стили --- */
+body {
+    font-family: var(--font-base);
+    background-color: var(--color-bg);
+    background-image: url('https://www.transparenttextures.com/patterns/dark-denim-3.png'); /* Едва заметная текстура ткани */
+    color: var(--color-text);
+    line-height: 1.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-header);
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+a {
+    color: var(--color-neon-blue);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+a:hover {
+    filter: brightness(1.2);
+    text-shadow: 0 0 5px var(--color-neon-blue);
+}
+
+/* --- 3. Шапка и Навигация --- */
+.main-header {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    font-family: var(--font-header);
+    font-size: 2rem;
+    color: var(--color-gold);
+}
+.main-nav a {
+    color: var(--color-text);
+    font-size: 1.1rem;
+    margin-left: 1.5rem;
+}
+
+/* --- 4. Кнопки --- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px; /* Элегантные скругленные кнопки */
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border: 2px solid;
+}
+.btn-primary {
+    background-color: var(--color-neon-blue);
+    border-color: var(--color-neon-blue);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: var(--color-neon-blue);
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.8);
+}
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+.btn-secondary:hover {
+    background-color: var(--color-gold);
+    color: var(--color-surface);
+}
+
+/* --- 5. Секции --- */
+section {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+section:last-of-type {
+    border-bottom: none;
+}
+.hero {
+    text-align: center;
+}
+.hero h1 {
+    font-size: 4rem;
+}
+
+/* --- 6. Элементы контента --- */
+
+/* Таблицы */
+.content-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.content-table th, .content-table td {
+    padding: 15px 20px;
+    text-align: left;
+}
+.content-table th {
+    background-color: var(--color-bordo);
+    color: var(--color-gold);
+    font-family: var(--font-header);
+    font-size: 1.2rem;
+}
+.content-table tbody tr {
+    border-bottom: 1px solid var(--color-border);
+}
+.content-table tbody tr:last-child {
+    border-bottom: none;
+}
+.content-table tbody tr:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* FAQ */
+.faq-item {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.faq-item summary {
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-family: var(--font-header);
+    font-size: 1.3rem;
+    color: var(--color-gold);
+}
+.faq-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--color-text-muted);
+}
+
+/* Отзывы */
+.review-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+}
+.review-card::before {
+    content: '“';
+    font-family: var(--font-header);
+    font-size: 8rem;
+    color: var(--color-bordo);
+    opacity: 0.1;
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+}
+
+/* --- 7. Дополнительные стили для шапки --- */
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo {
+    font-size: 1.5rem; /* Немного уменьшим логотип, чтобы всё поместилось */
+}
+
+.main-header .header-cta {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+}
