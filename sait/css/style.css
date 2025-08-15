@@ -24,13 +24,17 @@ body {
     background-color: var(--color-bg);
     background-image: url('https://www.transparenttextures.com/patterns/dark-denim-3.png'); /* Едва заметная текстура ткани */
     color: var(--color-text);
-    line-height: 1.8;
+    line-height: 1.9; /* Увеличили межстрочный интервал */
 }
 
 .container {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
+}
+
+p {
+    margin-bottom: 1.25rem; /* Добавили отступ после абзацев */
 }
 
 h1, h2, h3, h4 {
@@ -62,9 +66,18 @@ a:hover {
 }
 .logo {
     font-family: var(--font-header);
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--color-gold);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
 }
+.logo .logo-one {
+    font-size: 1.2em;
+    color: var(--color-neon-blue);
+    font-weight: 900;
+}
+
 .main-nav a {
     color: var(--color-text);
     font-size: 1.1rem;

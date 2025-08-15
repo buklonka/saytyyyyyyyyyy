@@ -21,7 +21,9 @@ $description = $meta_tags[$current_page_key]['description'] ?? '';
 <body>
     <header class="main-header">
         <div class="container">
-            <a href="<?php echo $site_config['domain_name']; ?>/" class="logo"><?php echo $site_config['casino_name']; ?> Обзор</a>
+            <a href="<?php echo $site_config['domain_name']; ?>/" class="logo">
+                <span class="logo-one">1</span><span class="logo-win">win</span> Обзор
+            </a>
             <nav class="main-nav">
                 <a href="<?php echo $site_config['domain_name']; ?>/bonuses.php">Бонусы</a>
                 <a href="<?php echo $site_config['domain_name']; ?>/promocodes.php">Промокоды</a>
