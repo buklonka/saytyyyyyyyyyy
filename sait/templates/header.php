@@ -16,21 +16,21 @@ $description = $meta_tags[$current_page_key]['description'] ?? '';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($title); ?></title>
     <meta name="description" content="<?php echo htmlspecialchars($description); ?>">
-    <link rel="stylesheet" href="<?php echo $site_config['domain_name']; ?>/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header class="main-header">
         <div class="container">
-            <a href="<?php echo $site_config['domain_name']; ?>/" class="logo">
-                <img src="https://1win.in.ua/wp-content/themes/1win/assets/img/logotype.svg" alt="<?php echo $site_config['casino_name']; ?> Logo" style="height: 40px; width: auto;">
+            <a href="/" class="logo">
+                <img src="/images/logo.svg" alt="<?php echo $site_config['casino_name']; ?> Logo" style="height: 40px; width: auto;">
             </a>
             <nav class="main-nav">
-                <a href="<?php echo $site_config['domain_name']; ?>/bonuses.php">Бонусы</a>
-                <a href="<?php echo $site_config['domain_name']; ?>/promocodes.php">Промокоды</a>
-                <a href="<?php echo $site_config['domain_name']; ?>/mirror.php">Зеркало</a>
-                <a href="<?php echo $site_config['domain_name']; ?>/app.php">Приложение</a>
-                <a href="<?php echo $site_config['domain_name']; ?>/reviews.php">Отзывы</a>
-                <a href="<?php echo $site_config['domain_name']; ?>/payments.php">Платежи</a>
+                <a href="/bonuses.php">Бонусы</a>
+                <a href="/promocodes.php">Промокоды</a>
+                <a href="/mirror.php">Зеркало</a>
+                <a href="/app.php">Приложение</a>
+                <a href="/reviews.php">Отзывы</a>
+                <a href="/payments.php">Платежи</a>
             </nav>
             <a href="<?php echo $site_config['affiliate_link']; ?>" target="_blank" class="btn btn-primary header-cta">Перейти на сайт</a>
         </div>
