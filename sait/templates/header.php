@@ -22,7 +22,7 @@ $description = $meta_tags[$current_page_key]['description'] ?? '';
     <header class="main-header">
         <div class="container">
             <a href="/" class="logo">
-                <img src="/images/logo.svg" alt="<?php echo $site_config['casino_name']; ?> Logo" style="height: 40px; width: auto;">
+                <img src="/images/logo.svg" alt="<?php echo $site_config['casino_name']; ?> Logo" height="40" style="height: 40px; width: auto;">
             </a>
             <nav class="main-nav">
                 <a href="/bonuses.php">Бонусы</a>

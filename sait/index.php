@@ -6,13 +6,13 @@ require_once __DIR__ . '/templates/header.php';
 <div class="container">
     <section class="hero">
         <div class="hero-banner-container">
-            <img src="/images/banner.png" alt="Промо-баннер <?php echo $site_config['casino_name']; ?>">
+            <img src="/images/banner.png" alt="Промо-баннер <?php echo $site_config['casino_name']; ?>" width="1200" height="400">
             <div class="hero-banner-promo-overlay" onclick="copyPromo()"><?php echo $site_config['promo_code']; ?></div>
         </div>
     </section>
     <section>
         <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="/images/bonus-icon.png" alt="Иконка казино">
+            <img src="/images/survey.png" alt="Иконка казино" width="64" height="64">
             <h2>Основные разделы казино</h2>
         </div>
         <div class="game-types" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
@@ -24,7 +24,7 @@ require_once __DIR__ . '/templates/header.php';
     </section>
     <section>
         <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="/images/bonus-icon.png" alt="Иконка бонусов">
+            <img src="/images/gift.png" alt="Иконка бонусов" width="64" height="64">
             <h2>Щедрые бонусы и акции</h2>
         </div>
         <p>Казино <strong><?php echo $site_config['casino_name']; ?></strong> славится своей бонусной программой. Новых игроков ждет приветственный пакет до 500%, а постоянных клиентов — регулярный кэшбэк и уникальные акции. На нашей странице бонусов мы подробно разобрали все условия, чтобы вы могли получить максимум.</p>
@@ -32,7 +32,7 @@ require_once __DIR__ . '/templates/header.php';
     </section>
     <section>
         <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="/images/promocode-icon.png" alt="Иконка промокодов">
+            <img src="/images/diamond.png" alt="Иконка промокодов" width="64" height="64">
             <h2>Ворвись в игру с бонусом: твой промокод!</h2>
         </div>
         <p>Хотите получить еще больше преимуществ при регистрации? Используйте наш специальный промокод <strong><?php echo $site_config['promo_code']; ?></strong>. Мы постоянно обновляем информацию и гарантируем, что вы получите лучший доступный бонус.</p>
@@ -40,7 +40,7 @@ require_once __DIR__ . '/templates/header.php';
     </section>
     <section>
         <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="/images/mirror-icon.png" alt="Иконка зеркала">
+            <img src="/images/survey.png" alt="Иконка зеркала" width="64" height="64">
             <h2>Доступ к сайту и рабочее зеркало</h2>
         </div>
         <p>Проблемы с доступом к <strong>официальному сайту <?php echo $site_config['casino_name']; ?></strong>? Блокировки — частая проблема, но ее легко решить. Используйте актуальное рабочее зеркало, чтобы гарантированно получить доступ к своему аккаунту и любимым играм.</p>
@@ -48,7 +48,7 @@ require_once __DIR__ . '/templates/header.php';
     </section>
     <section>
         <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="/images/app-icon.png" alt="Иконка приложения">
+            <img src="/images/app.png" alt="Иконка приложения" width="64" height="64">
             <h2>Мобильное приложение для Android и iOS</h2>
         </div>
         <p>Предпочитаете играть с телефона? Мобильное приложение <strong><?php echo $site_config['casino_name']; ?></strong> — это лучший способ получить быстрый и удобный доступ к ставкам и казино. Мы подготовили подробные инструкции по скачиванию и установке приложения на любую операционную систему.</p>
@@ -56,7 +56,7 @@ require_once __DIR__ . '/templates/header.php';
     </section>
     <section>
         <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="/images/reviews-icon.png" alt="Иконка отзывов">
+            <img src="/images/chat.png" alt="Иконка отзывов" width="64" height="64">
             <h2>Отзывы реальных игроков</h2>
         </div>
         <p>Что говорят о <strong><?php echo $site_config['casino_name']; ?></strong> другие игроки? Мы собрали честные мнения о скорости выплат, работе поддержки и общем впечатлении от игры. Узнайте о чужом опыте, прежде чем рисковать своим.</p>
@@ -64,7 +64,7 @@ require_once __DIR__ . '/templates/header.php';
     </section>
     <section>
         <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="/images/payments-icon.png" alt="Иконка платежей">
+            <img src="/images/contactless.png" alt="Иконка платежей" width="64" height="64">
             <h2>Пополнение и вывод средств</h2>
         </div>
         <p>Как пополнить счет и быстро вывести выигрыш? <strong><?php echo $site_config['casino_name']; ?></strong> поддерживает все популярные способы оплаты: от банковских карт до криптовалют. Мы подготовили подробный обзор всех платежных методов, лимитов и реальных сроков транзакций.</p>
