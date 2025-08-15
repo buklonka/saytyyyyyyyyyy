@@ -65,17 +65,9 @@ a:hover {
     z-index: 1000;
 }
 .logo {
-    font-family: var(--font-header);
-    font-size: 1.8rem;
-    color: var(--color-gold);
-    display: inline-flex;
-    align-items: baseline;
-    gap: 2px;
-}
-.logo .logo-one {
-    font-size: 1.2em;
-    color: var(--color-neon-blue);
-    font-weight: 900;
+    /* Стили для текстового логотипа больше не нужны, т.к. используется SVG */
+    display: flex;
+    align-items: center;
 }
 
 .main-nav a {

@@ -22,7 +22,7 @@ $description = $meta_tags[$current_page_key]['description'] ?? '';
     <header class="main-header">
         <div class="container">
             <a href="<?php echo $site_config['domain_name']; ?>/" class="logo">
-                <span class="logo-one">1</span><span class="logo-win">win</span> Обзор
+                <img src="https://1win.in.ua/wp-content/themes/1win/assets/img/logotype.svg" alt="<?php echo $site_config['casino_name']; ?> Logo" style="height: 40px; width: auto;">
             </a>
             <nav class="main-nav">
                 <a href="<?php echo $site_config['domain_name']; ?>/bonuses.php">Бонусы</a>
