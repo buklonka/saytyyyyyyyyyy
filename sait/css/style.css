@@ -1,57 +1,77 @@
-/* === ДИЗАЙН-СИСТЕМА v3.0 "НОЧНОЙ ЛАС-ВЕГАС" === */
+/* === ДИЗАЙН-СИСТЕМА v8.0 "ПРОЕКТ ФИРМЕННЫЙ ВЕГАС" === */
 
-/* --- 1. Шрифты и Переменные --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+/* --- 1. Шрифты, Переменные и Анимации --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bebas+Neue&display=swap');
 
 :root {
-    --font-header: 'Playfair Display', serif; /* Элегантный шрифт для заголовков */
-    --font-base: 'Lato', sans-serif;          /* Чистый шрифт для текста */
+    --font-header: 'Bebas Neue', sans-serif;
+    --font-base: 'Roboto', sans-serif;
 
-    --color-bg: #1a1a1a;                      /* Глубокий темный фон */
-    --color-surface: #2c2c2c;                /* Фон для карточек, чуть светлее */
-    --color-border: #444;                     /* Цвет рамок */
-    --color-text: #e5e5e5;                    /* Основной текст, не чисто белый */
-    --color-text-muted: #999;                 /* Приглушенный текст */
+    --color-bg: #1a1a1a;
+    --color-surface: #2c2c2c;
+    --color-border: #444;
+    --color-text: #FFFFFF;
+    --color-text-muted: #aaa;
 
-    --color-gold: #c0a062;                     /* Приглушенное матовое золото */
-    --color-bordo: #8a2a3e;                    /* Глубокий винный/бордовый */
-    --color-neon-blue: #00bfff;                /* Яркий неоновый синий для CTA */
+    --color-accent-neon: #1985E0; /* Фирменный синий 1win */
+    --color-accent-gold: #DAA520;  /* Дорогое золото для акцентов */
 }
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(218, 165, 32, 0.2); }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(218, 165, 32, 0.4); }
+    100% { transform: scale(1); box-shadow: 0 0 10px rgba(218, 165, 32, 0.2); }
+}
+
+@keyframes neon-flicker {
+    0%, 100% { text-shadow: 0 0 7px var(--color-accent-neon), 0 0 15px var(--color-accent-neon); }
+    50% { text-shadow: 0 0 10px var(--color-accent-neon), 0 0 20px var(--color-accent-neon); }
+}
+
 
 /* --- 2. Базовые Стили --- */
 body {
     font-family: var(--font-base);
     background-color: var(--color-bg);
-    background-image: url('https://www.transparenttextures.com/patterns/dark-denim-3.png'); /* Едва заметная текстура ткани */
+    background-image: url('https://www.transparenttextures.com/patterns/dark-denim-3.png');
     color: var(--color-text);
-    line-height: 1.9; /* Увеличили межстрочный интервал */
+    line-height: 1.8;
 }
-
 .container {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
-
 p {
-    margin-bottom: 1.25rem; /* Добавили отступ после абзацев */
+    margin-bottom: 1.25rem;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
 }
-
 h1, h2, h3, h4 {
     font-family: var(--font-header);
-    font-weight: 700;
-    color: var(--color-gold);
+    font-weight: 400;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
+h1 { font-size: 5rem; }
+h2 { font-size: 3rem; color: var(--color-accent-neon); }
+h3 { font-size: 2rem; }
 
 a {
-    color: var(--color-neon-blue);
+    color: var(--color-accent-neon);
     text-decoration: none;
     font-weight: bold;
     transition: all 0.2s ease;
 }
 a:hover {
     filter: brightness(1.2);
-    text-shadow: 0 0 5px var(--color-neon-blue);
+    animation: neon-flicker 1.5s infinite alternate;
 }
 
 /* --- 3. Шапка и Навигация --- */
@@ -64,153 +84,159 @@ a:hover {
     top: 0;
     z-index: 1000;
 }
-.logo {
-    /* Стили для текстового логотипа больше не нужны, т.к. используется SVG */
-    display: flex;
-    align-items: center;
-}
-
-.main-nav a {
-    color: var(--color-text);
-    font-size: 1.1rem;
-    margin-left: 1.5rem;
-}
-
-/* --- 4. Кнопки --- */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    border-radius: 50px; /* Элегантные скругленные кнопки */
-    font-weight: bold;
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    border: 2px solid;
-}
-.btn-primary {
-    background-color: var(--color-neon-blue);
-    border-color: var(--color-neon-blue);
-    color: #fff;
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
-}
-.btn-primary:hover {
-    background-color: #fff;
-    color: var(--color-neon-blue);
-    box-shadow: 0 0 25px rgba(0, 191, 255, 0.8);
-}
-.btn-secondary {
-    background-color: transparent;
-    border-color: var(--color-gold);
-    color: var(--color-gold);
-}
-.btn-secondary:hover {
-    background-color: var(--color-gold);
-    color: var(--color-surface);
-}
-
-/* --- 5. Секции --- */
-section {
-    padding: 3rem 0;
-    border-bottom: 1px solid var(--color-border);
-}
-section:last-of-type {
-    border-bottom: none;
-}
-.hero {
-    text-align: center;
-}
-.hero h1 {
-    font-size: 4rem;
-}
-
-/* --- 6. Элементы контента --- */
-
-/* Таблицы */
-.content-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 2rem 0;
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    overflow: hidden;
-}
-.content-table th, .content-table td {
-    padding: 15px 20px;
-    text-align: left;
-}
-.content-table th {
-    background-color: var(--color-bordo);
-    color: var(--color-gold);
-    font-family: var(--font-header);
-    font-size: 1.2rem;
-}
-.content-table tbody tr {
-    border-bottom: 1px solid var(--color-border);
-}
-.content-table tbody tr:last-child {
-    border-bottom: none;
-}
-.content-table tbody tr:hover {
-    background-color: rgba(255,255,255,0.05);
-}
-
-/* FAQ */
-.faq-item {
-    background-color: transparent;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-.faq-item summary {
-    font-weight: bold;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    font-family: var(--font-header);
-    font-size: 1.3rem;
-    color: var(--color-gold);
-}
-.faq-content {
-    padding: 0 1.5rem 1.5rem 1.5rem;
-    color: var(--color-text-muted);
-}
-
-/* Отзывы */
-.review-card {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-radius: 8px;
-    position: relative;
-}
-.review-card::before {
-    content: '“';
-    font-family: var(--font-header);
-    font-size: 8rem;
-    color: var(--color-bordo);
-    opacity: 0.1;
-    position: absolute;
-    top: -1rem;
-    left: 1rem;
-}
-
-/* --- 7. Дополнительные стили для шапки --- */
 .main-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.main-header .logo {
-    font-size: 1.5rem; /* Немного уменьшим логотип, чтобы всё поместилось */
+.logo { display: flex; align-items: center; }
+.main-nav a {
+    color: var(--color-text);
+    font-size: 1.3rem;
+    font-family: var(--font-header);
+    margin-left: 2rem;
+    letter-spacing: 1px;
 }
 
-.main-header .header-cta {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.8rem;
+/* --- 4. Кнопки --- */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--font-header);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    border: 2px solid;
+}
+.btn-primary {
+    background-color: var(--color-accent-neon);
+    border-color: var(--color-accent-neon);
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(25, 133, 224, 0.5);
+}
+.btn:active {
+    transform: scale(0.95);
+    filter: brightness(0.9);
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--color-accent-gold);
+    color: var(--color-accent-gold);
+}
+.btn-secondary:hover {
+    background-color: var(--color-accent-gold);
+    border-color: var(--color-accent-gold);
+    color: #000;
+}
+
+/* --- 5. Секции и Анимации Элементов --- */
+section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+section:last-of-type { border-bottom: none; }
+.hero { text-align: center; position: relative; overflow: hidden; }
+
+/* Анимация иконки рулетки */
+.roulette-wheel {
+    width: 200px;
+    height: 200px;
+    border: 10px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    opacity: 0.1;
+    animation: spin 20s linear infinite;
+}
+.roulette-wheel::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border: 5px solid var(--color-accent-neon);
+    border-radius: 50%;
+    clip-path: polygon(50% 0, 100% 0, 100% 25%, 50% 50%);
+}
+
+/* Пульсация иконок разделов */
+section .container > div:first-child > img {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+section .container > div:first-child:hover img {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* --- 6. Элементы контента (стили изменены для нового дизайна) --- */
+.promocode-card {
+    border: 2px dashed var(--color-accent-neon) !important;
+    background-color: var(--color-surface) !important;
+}
+.promocode-value {
+    font-family: var(--font-header) !important;
+    background: var(--color-accent-neon) !important;
+    color: #fff !important;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border: none !important;
+}
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+.content-table th, .content-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+.content-table th {
+    font-family: var(--font-header);
+    font-size: 1.2rem;
+    color: var(--color-accent-neon);
+    text-transform: uppercase;
+}
+.faq-item {
+    border: 1px solid var(--color-border);
+    margin-bottom: 1rem;
+}
+.faq-item summary {
+    font-family: var(--font-header);
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+.review-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent-neon);
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+.review-card::before { display: none; }
+.game-type-item {
+    border: 1px solid var(--color-border);
+    font-family: var(--font-header);
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    background-color: var(--color-surface);
+}
+.game-type-item:hover {
+    background-color: var(--color-accent-gold);
+    color: #000;
+    border-color: var(--color-accent-gold);
 }

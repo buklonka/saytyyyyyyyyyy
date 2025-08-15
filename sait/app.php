@@ -3,7 +3,7 @@ require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/templates/header.php';
 ?>
 <div class="container page-content" style="text-align: left;">
-    <h1>Скачать приложение <?php echo $site_config['casino_name']; ?> на Android и iOS</h1>
+    <h1>Приложение <?php echo $site_config['casino_name']; ?>: играй где угодно, качай сейчас!</h1>
     <p>Хотите делать ставки и играть в казино с максимальным комфортом? Лучшее решение — <strong>скачать приложение <?php echo $site_config['casino_name']; ?></strong>. Официальное приложение обеспечивает стабильный доступ к вашему аккаунту в обход блокировок, экономит трафик и работает быстрее, чем мобильная версия сайта. Здесь вы найдете подробные инструкции, как <strong>скачать <?php echo $site_config['casino_name']; ?> на Андроид и Айфон</strong>.</p>
 
     <!-- 1. Инструкция для Android -->

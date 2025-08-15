@@ -4,7 +4,7 @@ require_once __DIR__ . '/templates/header.php';
 ?>
 
 <div class="container page-content" style="text-align: left;">
-    <h1>Пополнение и вывод средств в <?php echo $site_config['casino_name']; ?></h1>
+    <h1>Касса <?php echo $site_config['casino_name']; ?>: быстрые депозиты и выводы без проблем</h1>
     <p>Удобство финансовых операций — ключевой показатель надежности казино. В <strong><?php echo $site_config['casino_name']; ?></strong> этому уделили особое внимание, предложив игрокам десятки способов <strong>пополнить счет и вывести выигрыш</strong>. На этой странице мы подробно рассмотрим все доступные платежные системы, актуальные лимиты и реальные сроки зачисления средств.</p>
 
     <section>
